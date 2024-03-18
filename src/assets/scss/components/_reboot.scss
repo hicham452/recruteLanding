@@ -1,0 +1,50 @@
+/************_reboot.scss*************/
+
+.body {
+  padding-top: 75px;
+}
+
+b,
+strong {
+  font-weight: $font-weight-semibold;
+}
+
+$font-size-mixing: 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24;
+
+@each $font-size-mixing in $font-size-mixing {
+  .font-#{$font-size-mixing} {
+    font-size: #{$font-size-mixing}px !important;
+  }
+}
+
+.wrapper-box {
+  position: relative;
+  padding: 85px 0;
+}
+
+.three_line {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.pagination {
+  gap: 6px;
+  flex-wrap: wrap;
+  .page-link {
+    border-radius: $border-radius-pill !important;
+    height: 42px;
+    width: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+
+    @media screen and (max-width:335px) {
+      height: 35px;
+      width: 35px;
+    }
+  }
+}

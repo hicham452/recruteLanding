@@ -3,9 +3,13 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "newix-ng": {
+    "Hiresy": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -13,25 +17,27 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/newix-ng",
+            "outputPath": "dist/hiresy",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
             ],
             "tsConfig": "tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/favicon.ico"
             ],
             "styles": [
-              "src/styles.css",
-              "node_modules/slick-carousel/slick/slick.scss",
-              "node_modules/slick-carousel/slick/slick-theme.scss"
+              "bootstrap/dist/css/bootstrap.min.css",
+              "src/assets/scss/bootstrap.scss",
+              "src/assets/scss/bootstrap-icons.scss",
+              "src/assets/scss/main.scss"
             ],
             "scripts": [
-              "node_modules/jquery/dist/jquery.min.js",
-              "node_modules/slick-carousel/slick/slick.min.js"
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+              "node_modules/apexcharts/dist/apexcharts.min.js"
             ],
             "server": "src/main.server.ts",
             "prerender": true,
@@ -41,22 +47,21 @@
           },
           "configurations": {
             "production": {
-              "budgets": [
-                {
+              "budgets": [{
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "2mb",
+                  "maximumError": "100mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "700kb",
+                  "maximumError": "700kb"
                 }
               ],
               "outputHashing": "all"
             },
             "development": {
-              "optimization": false,
+              "optimization": true,
               "extractLicenses": false,
               "sourceMap": true
             }
@@ -67,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "newix-ng:build:production"
+              "buildTarget": "Hiresy:build:production"
             },
             "development": {
-              "buildTarget": "newix-ng:build:development"
+              "buildTarget": "Hiresy:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -78,7 +83,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "newix-ng:build"
+            "buildTarget": "Hiresy:build"
           }
         },
         "test": {
@@ -89,12 +94,13 @@
               "zone.js/testing"
             ],
             "tsConfig": "tsconfig.spec.json",
+            "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           }
@@ -103,6 +109,6 @@
     }
   },
   "cli": {
-    "analytics": "faebaaa6-15e2-465b-b284-c2fe5c7014c5"
+    "analytics": "d28e4ca2-b05c-4113-8fcf-27065b62dea3"
   }
 }

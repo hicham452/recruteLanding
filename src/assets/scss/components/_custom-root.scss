@@ -1,0 +1,5 @@
+
+[data-bs-theme="dark"] {
+    --#{$prefix}light:                #{$custom-light-color};
+    --#{$prefix}light-rgb:            #{to-rgb($custom-light-color)};
+}

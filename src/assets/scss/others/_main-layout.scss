@@ -1,0 +1,240 @@
+//
+// _main-layout.scss
+//
+
+.main-home {
+    position: relative;
+    padding: 150px 0px 0px;
+
+    &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        height: 100%;
+        width: 55%;
+        background-color: $secondary;
+        clip-path: polygon(38% 0, 100% 0%, 100% 100%, 0% 100%);
+        z-index: -1;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        height: 100%;
+        width: 30%;
+        background-color: $success;
+        clip-path: polygon(62% 0, 100% 0%, 100% 100%, 0% 100%);
+        z-index: 0;
+    }
+
+    .home-widget {
+        width: 180px;
+        position: absolute;
+        top: 0;
+        right: -40px;
+        
+        @include media-breakpoint-down(lg) { 
+            right: 8px;
+        }
+    }
+
+    .home-widget-2 {
+        width: 180px;
+        position: absolute;
+        bottom: 25px;
+        left: -100px;
+        
+        @include media-breakpoint-down(lg) { 
+            left: 8px;
+            box-shadow: $box-shadow;
+        }
+    }
+}
+
+[dir=rtl] {
+    .main-home {
+        &::after {
+            clip-path: polygon(38% 0, 100% 0%, 100% 100%, 0% 100%);
+        }
+    
+        &::before {
+            clip-path: polygon(62% 0, 100% 0%, 100% 100%, 0% 100%);
+        }
+    }
+}
+
+.learn-about {
+    img {
+        border-radius: 0.25rem 30px 0.25rem;
+    }
+
+    &::after {
+        content: "";
+        inset: 10px -15px -15px 10px;
+        position: absolute;
+        background-color: var(--#{$prefix}primary-bg-subtle);
+        border-radius: 0.25rem 30px 0.25rem;
+        z-index: 0;
+        @include media-breakpoint-down(lg) { 
+            display: none;
+        }
+    }
+
+    .widgets {
+        position: absolute;
+        bottom: 0;
+        left: -60px;
+        width: 225px;
+        z-index: 2;
+        @include media-breakpoint-down(lg) {
+            left: 20px;
+        }
+    }
+}
+
+.client-tabs-menu {
+    .nav-link {
+        padding: 8px;
+        background-color: rgba($secondary, 0.06);
+
+        &.active {
+            background-color: $secondary;
+        }
+    }
+}
+
+.subcribe-input {
+    .form-control {
+        padding: 13px 130px 13px 16px;
+        border: none;
+        box-shadow: none;
+    }
+
+    .btn {
+        position: absolute;
+        right: 3px;
+        top: 3px;
+    }
+}
+
+//layout-two
+.layout_two_home {
+    position: relative;
+    padding: 150px 0px 0px;
+
+    .layout_two-home_img {
+        .widgets {
+            img {
+                &:first-child {
+                    position: absolute;
+                    top: 15px;
+                    right: -90px;
+
+                    @include media-breakpoint-down(lg) {
+                        right: 10px;
+                    }
+                }
+
+                &:nth-child(2) {
+                    position: absolute;
+                    top: 81px;
+                    left: -90px;
+
+                    @include media-breakpoint-down(lg) {
+                        left: 10px;
+                    }
+                }
+
+                &:nth-child(3) {
+                    position: absolute;
+                    bottom: 25%;
+                    right: -20px;
+
+                    @include media-breakpoint-down(lg) {
+                        right: 25px;
+                    }
+                }
+            }
+        }
+    }
+
+    .font_effect {
+        position: absolute;
+        font-size: 110px;
+        left: 15%;
+        bottom: 12%;
+        opacity: 0.1;
+
+        @include media-breakpoint-down(lg) {
+            display: none;
+        }
+    }
+
+    .font_effect-2 {
+        position: absolute;
+        font-size: 110px;
+        right: 15%;
+        bottom: 12%;
+        opacity: 0.1;
+
+        @include media-breakpoint-down(lg) {
+            display: none;
+        }
+    }
+}
+
+.trusted_holder {
+    position: relative;
+
+    p {
+        background-color: var(--#{$prefix}secondary-bg);
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 12px 0 auto 0;
+        border-top: 1px solid var(--#{$prefix}border-color);
+        z-index: -1;
+    }
+}
+
+.layout-two-about {
+    position: relative;
+
+    .widgets {
+        position: absolute;
+        bottom: 45px;
+        right: 45px;
+    }
+}
+
+.job_bag-icon {
+    top: 25px;
+    left: 15px;
+    transform: rotate(-45deg);
+    font-size: 8rem;
+}
+
+.job_email-icon{
+    top: 25px;
+    right: 15px;
+    transform: rotate(45deg);
+    font-size: 8rem;
+}
+
+.layout_three_home {
+    padding: 200px 0 120px;
+    position: relative;
+    .bg-overlay{
+        position: absolute;
+        inset: 0;
+        background-color: darken($secondary, 10.5%);
+        opacity: 0.85;
+    }
+}
