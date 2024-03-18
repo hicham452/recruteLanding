@@ -1,0 +1,71 @@
+<footer class="pt-16 pb-8 border-t overflow-hidden border-dark bg-dark dark:border-muted/30">
+    <div class="container">
+        <div>
+            <img src="assets/images/logo-light.png" class="h-8 mx-auto" alt="">
+
+            <div class="mt-10">
+                <ul class="flex flex-wrap items-center justify-center gap-6">
+                    <li
+                        class="text-lg font-semibold pr-7 text-white hover:text-indigo-500 relative after:absolute after:content-['-'] after:text-white/75 after:pl-7 rtl:after:pr-7 transition-all duration-500">
+                        <a href="#!">About</a></li>
+                    <li
+                        class="text-lg font-semibold pr-7 text-white hover:text-indigo-500 relative after:absolute after:content-['-'] after:text-white/75 after:pl-7 rtl:after:pr-7 transition-all duration-500">
+                        <a href="#!">Sevices</a></li>
+                    <li
+                        class="text-lg font-semibold pr-7 text-white hover:text-indigo-500 relative after:absolute after:content-['-'] after:text-white/75 after:pl-7 rtl:after:pr-7 transition-all duration-500">
+                        <a href="#!">Team</a></li>
+                    <li
+                        class="text-lg font-semibold pr-7 text-white hover:text-indigo-500 relative after:absolute after:content-['-'] after:text-white/75 after:pl-7 rtl:after:pr-7 transition-all duration-500">
+                        <a href="#!">Testimonials</a></li>
+                    <li
+                        class="text-lg font-semibold text-white hover:text-indigo-500 relative transition-all duration-500 rtl:pr-7">
+                        contact us</li>
+                </ul>
+
+                <div class="flex items-center justify-center gap-4 my-10">
+                    <a href="javascript:void(0)">
+                        <div
+                            class="h-12 w-12 flex items-center justify-center rounded-lg bg-white/10 hover:bg-indigo-500 transition-all duration-500">
+                            <i class="mdi mdi-facebook text-2xl text-white"></i>
+                        </div>
+                    </a>
+
+                    <a href="javascript:void(0)">
+                        <div
+                            class="h-12 w-12 flex items-center justify-center rounded-lg bg-white/10 hover:bg-indigo-500 transition-all duration-500">
+                            <i class="mdi mdi-instagram text-2xl text-white"></i>
+                        </div>
+                    </a>
+
+                    <a href="javascript:void(0)">
+                        <div
+                            class="h-12 w-12 flex items-center justify-center rounded-lg bg-white/10 hover:bg-indigo-500 transition-all duration-500">
+                            <i class="mdi mdi-twitter text-2xl text-white"></i>
+                        </div>
+                    </a>
+
+                    <a href="javascript:void(0)">
+                        <div
+                            class="h-12 w-12 flex items-center justify-center rounded-lg bg-white/10 hover:bg-indigo-500 transition-all duration-500">
+                            <i class="mdi mdi-reddit text-2xl text-white"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center bg-white/10 py-2.5 px-3 rounded">
+            <p class="text-white"> ©
+                {{year}} Newix. Design and coded by ThemesBoss.
+            </p>
+        </div>
+    </div>
+</footer>
+
+<a href="javascript:void(0)"
+    (click)="backToTop()"
+    class="back_top h-9 w-9 flex items-center justify-center text-center fixed bottom-3 end-3 rounded-md font-bold text-3xl text-white bg-indigo-500"
+    [style.display]="isShow ? 'block' : 'none'"
+    >
+    <i class="mdi mdi-chevron-up"></i>
+</a>
