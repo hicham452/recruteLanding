@@ -1,0 +1,128 @@
+/************_topbar.scss*************/
+
+.navbar{ 
+    height: 75px;
+    padding: 20px 0px;
+    background-color: var(--#{$prefix}secondary-bg);
+    transition: all 0.5s ease;
+    .navbar-nav {
+        .nav-item {
+            .nav-link {
+                color: var(--#{$prefix}secondary-color);
+                font-size: 15px;
+                font-weight: $font-weight-medium;
+                padding: 0px 17px;
+                transition: all 0.5s ease;
+                height: 75px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                &:hover, &.active {
+                    color: $primary;
+                }
+            }
+            .dropdown-menu {
+                box-shadow: $box-shadow;
+                border: none;
+                border-radius: 0px 0px $border-radius $border-radius;
+                margin-top: 0;
+                border-bottom: 2px solid $primary;
+                transition: all 0.5s ease;
+                li {
+                    .dropdown-item {
+                        padding: 6px 20px;
+                        font-size: 14.5px;
+                        color: var(--#{$prefix}body-emphasis-color);
+                        background-color: transparent;
+                        transition: all 0.5s ease;
+                        &:hover, &.active {
+                            color: $primary;
+                        }
+                    }
+                }
+            }
+        }
+        .dropdown {
+            @media (min-width: 992px) {
+                &:hover>.dropdown-menu {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .navbar-brand {
+        .dark {
+            display: inline-block;
+        }
+        .light {
+            display: none;
+        }
+    }
+
+    .navbar-toggler {
+        &:focus {
+            box-shadow: none;
+        }
+    }
+
+    @include media-breakpoint-down(lg)  {
+        .navbar-collapse {
+            position: fixed;
+            top: 74px;
+            left: 0;
+            right: 0;
+            background-color: var(--#{$prefix}secondary-bg);
+            box-shadow: $box-shadow;
+            .navbar-nav .nav-item {
+                .nav-link {
+                    justify-content: flex-start;
+                    padding: 10px 18px;
+                    height: auto;
+                }
+            }
+        }
+    }
+
+    &.nav-sticky{
+        background-color: var(--#{$prefix}secondary-bg);
+        box-shadow: $box-shadow;
+    }
+}
+
+.topbar-height {
+    display: flex;
+    align-items: center;
+    @media (min-width: 992px) { 
+        height: 75px;
+    }
+}
+
+.dropdown-menu {
+    &.dropdown-menu-md {
+        min-width: 14rem;
+    }
+
+    &.dropdown-menu-lg {
+        min-width: 18rem
+    }
+
+    &.dropdown-menu-xl {
+        min-width: 22rem
+    }
+}
+
+
+
+[data-bs-theme="dark"] {
+    .navbar {  
+        .navbar-brand {
+            .dark {
+                display: none;
+            }
+            .light {
+                display: inline-block;
+            }
+        }
+    }
+}

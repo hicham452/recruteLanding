@@ -1,0 +1,110 @@
+.sidebar-left {
+    width: 260px;
+    z-index: 1005;
+
+    .navbar-brand {
+        height: 80px;
+    }
+
+    .sidebar-navbar-menu {
+        ul {
+            li {
+                a {
+                    font-size: 15px;
+                    font-weight: 500;
+                    color: var(--#{$prefix}secondary-color);
+                    padding: 10px 28px;
+                    display: block;
+                    transition: all 0.5s ease;
+
+                    i {
+                        margin-right: 5px;
+                    }
+
+                    &:hover,
+                    &.active {
+                        color: var(--#{$prefix}secondary);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.admin-topbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 260px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    z-index: 1004;
+
+    @media (max-width:991.98px) {
+        left: 0px;
+    }
+
+    .navbar-toggler {
+        display: none;
+
+        @media (max-width:991.98px) {
+            display: inline-block;
+        }
+    }
+}
+
+.admin-page-wrapper {
+    padding: 108px 150px 60px;
+    margin-left: 260px;
+
+    @media (max-width: 1400px) {
+        padding: 108px 100px 60px;
+    }
+
+    @media (max-width: 767.98px) {
+        padding: 108px 60px 60px;
+    }
+
+    @media (max-width: 424.98px) {
+        padding: 108px 40px 60px;
+    }
+
+    @media (max-width: 324.98px) {
+        padding: 108px 20px 60px;
+    }
+
+    @media (max-width:991.98px) {
+        margin-left: 0px;
+    }
+}
+
+.admin-footer {
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.custom-dark-button {
+    right: 0;
+    top: 40%;
+    z-index: 1006;
+}
+
+.offcanvas-sidebar {
+    width: 260px !important;
+    position: static;
+    visibility: visible;
+    transform: none !important;
+
+
+    @media (max-width:991.98px) {
+        position: fixed;
+        transform: translateX(-100%) !important;
+
+    }
+
+    &.offcanvas.show:not(.hiding) {
+        transform: none !important;
+    }
+}
