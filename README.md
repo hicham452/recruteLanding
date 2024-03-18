@@ -1,0 +1,1 @@
+# hiresy-angular
