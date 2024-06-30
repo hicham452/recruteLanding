@@ -13,6 +13,7 @@ import { PricingComponent } from "../Pages/pricing/pricing.component";
 import { TeamComponent } from "../Pages/team/team.component";
 import { ContactUsComponent } from "../Pages/contact-us/contact-us.component";
 import { AboutUsComponent } from "../Pages/about-us/about-us.component";
+import { DashboardComponent } from "../Pages/admin-dashboard/admin-dashboard.component";
 
 export const LANDING_ROUTES: Route[] = [
 
@@ -29,6 +30,7 @@ export const LANDING_ROUTES: Route[] = [
   { path: 'pricing', component: PricingComponent },
   { path: 'team', component: TeamComponent },
   { path: 'contact-us', component: ContactUsComponent },
-  { path: 'about-us', component: AboutUsComponent },
+  { path: 'admin-dashboard', component: DashboardComponent },
+
 
 ]
